@@ -44,6 +44,21 @@ The goal is to provide a dynamic way for children to practice and improve their 
 
 ---
 
+## 📸 Screenshots
+
+### Login
+![Login](screenshots/login.png)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Matching Game
+![Matching Game](screenshots/juego%20pares.png)
+
+### Books Section
+![Books](screenshots/libros.png)
+
+
 ##  Environment & Execution
 
  **This project runs only in a local environment**.  
@@ -59,3 +74,5 @@ To run the project, a local server and database configuration are required.
 It was created as an academic project and is not intended for production use.
 
 Newer projects reflect improved coding practices and architecture.
+
+
