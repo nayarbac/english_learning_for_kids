@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agregar Palabras</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #9bf45a;
+      }
+      .content-wrapper {
+        background-color: rgba(255, 255, 255, 0.4);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 30px 450px rgb(0, 0, 0, 0.9);
+        width: 100%;
+        max-width: 600px; /* Cambiar el tamaño según lo necesario */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <h2 class="text-center">Agregar Palabra</h2>
+
+      <form action="agregar_palabra.php" method="POST">
+        <div class="form-group">
+          <label for="palabra_espanol">Palabra en Español</label>
+          <input
+            type="text"
+            class="form-control"
+            id="palabra_espanol"
+            name="palabra_espanol"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="palabra_ingles">Palabra en Inglés</label>
+          <input
+            type="text"
+            class="form-control"
+            id="palabra_ingles"
+            name="palabra_ingles"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="id_nivel">Nivel (opcional)</label>
+          <input
+            type="number"
+            class="form-control"
+            id="id_nivel"
+            name="id_nivel"
+            min="0"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          Agregar Palabra
+        </button>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+      // Función para mostrar el mensaje de éxito o error usando SweetAlert2
+      window.onload = function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get("status");
+
+        if (status === "success") {
+          Swal.fire({
+            title: "¡Palabra agregada!",
+            text: "La palabra ha sido agregada con éxito.",
+            icon: "success",
+            confirmButtonText: "Aceptar",
+          });
+        } else if (status === "error") {
+          Swal.fire({
+            title: "Error al agregar palabra",
+            text: "Hubo un problema al agregar la palabra. Por favor, intenta nuevamente.",
+            icon: "error",
+            confirmButtonText: "Aceptar",
+          });
+        }
+      };
+    </script>
+  </body>
+</html>

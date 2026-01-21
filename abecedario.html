@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botones del Abecedario y Números</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #fffacd;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding-top: 70px; /* Espacio para la barra de navegación fija */
+        font-family: "Comic Sans MS", cursive, sans-serif; /* Fuente divertida para niños */
+      }
+
+      nav.navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .btn-letter,
+      .btn-number {
+        width: 90px;
+        height: 90px;
+        margin: 15px;
+        font-size: 32px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+
+      .btn-letter {
+        color: #fff; /* Texto blanco */
+        background-color: #ff9e00; /* Fondo naranja brillante */
+        border: 3px solid #ff9e00;
+      }
+
+      .btn-number {
+        color: #fff; /* Texto blanco */
+        background-color: #ff6f61; /* Fondo rojo brillante */
+        border: 3px solid #ff6f61;
+      }
+
+      .btn-letter:hover,
+      .btn-number:hover {
+        transform: translateY(-5px); /* Efecto de rebote */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-letter:active,
+      .btn-number:active {
+        transform: translateY(2px); /* Efecto de presionar */
+      }
+
+      .modal-content img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-body {
+        padding: 2rem;
+        border-radius: 15px;
+        background-color: #ffecd2;
+        box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .card-title {
+        color: #ff6f61;
+        font-weight: bold;
+        font-size: 2rem;
+      }
+
+      .card-text {
+        font-size: 1.2rem;
+        color: #333;
+        text-align: center;
+      }
+
+      .modal-header {
+        background-color: #fce38a;
+        text-align: center;
+      }
+      /* Estilos para el botón de regresar */
+      .regresar-btn {
+        position: absolute;
+        top: 80px;
+        left: 20px;
+        font-size: 1.2rem;
+        padding: 10px 15px;
+        border-radius: 10px;
+        color: #fff;
+        background-color: #ff6f61;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      /* Efecto hover */
+      .regresar-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      }
+
+      #abecedario-container,
+      #numeros-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* Estilo para el contenedor de las instrucciones y el personaje */
+      #instructions-container {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        width: 100%;
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      #instructions-text {
+        font-size: 1.3rem;
+        color: #333;
+        text-align: left;
+        margin-right: 20px; 
+        width: 60%;
+      }
+
+      #animated-character {
+        width: 150px;
+        height: 150px;
+        background-image: url("imagenes/patrick.png");
+        background-size: cover;
+        background-position: center;
+        animation: moveCharacter 2s infinite alternate;
+      }
+
+      @keyframes moveCharacter {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-20px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Barra de Navegación -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: #fce38a"
+    >
+      <div class="container-fluid">
+        <a
+          class="navbar-brand"
+          href="#"
+          style="font-size: 1.8rem; font-weight: bold; color: #ff6f61"
+        >
+          Learningles 🍎
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="tienda.php"
+                style="color: #ff6f61; font-weight: bold"
+                >Tienda</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="perfil.php"
+                style="color: #ff6f61; font-weight: bold"
+                >Mi perfil</a>
+          
+        </div>
+      </div>
+    </nav>
+    <!-- Contenido Principal -->
+    <div class="container mt-2">
+      <button onclick="history.back()" class="btn regresar-btn">
+        <i class="fas fa-arrow-left"></i> Regresar
+      </button>
+    </div>
+
+    <!-- Card de Presentación -->
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div
+            class="card text-center"
+            style="
+              border-radius: 15px;
+              box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+              background-color: #ffecd2;
+            "
+          >
+            <div class="card-body">
+              <h3 class="card-title" style="color: #ff6f61; font-weight: bold">
+                Bienvenidos a Learningles 🍎
+              </h3>
+              <p class="card-text" style="font-size: 1.1rem; color: #333">
+                En esta página, encontrarás recursos interactivos para aprender
+                el abecedario en inglés y los números, al hacer click puedes ver
+                diversas palabras junto a sus dibujos y puedes interactuar con
+                el botón rojo para escuchar la pronunciación de cada letra o
+                número cuantas veces quieras.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div id="instructions-container">
+      <div id="instructions-text">
+        <p>
+          Haz clic en los botones de letras o números para aprender y escuchar
+          su pronunciación. ¡Diviértete aprendiendo!
+        </p>
+      </div>
+      <div id="animated-character"></div>
+    </div>
+
+    
+    <div class="container mt-4">
+      <div class="row justify-content-center" id="abecedario-container">
+       
+      </div>
+
+      <!-- Botones de los Números -->
+      <div
+        class="row justify-content-center"
+        id="numeros-container"
+        style="margin-top: 30px"
+      >
+        <!-- Los botones de los números se agregarán aquí dinámicamente -->
+      </div>
+    </div>
+
+    <!-- Modal de Bootstrap -->
+    <div
+      class="modal fade"
+      id="modalImagen"
+      tabindex="-1"
+      aria-labelledby="modalImagenLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalImagenLabel"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img id="imagenModal" src="" alt="Imagen de la letra o número" />
+            <button
+              id="reproducirBtn"
+              class="btn btn-success mt-2"
+              style="
+                width: 100%;
+                font-size: 1.2rem;
+                font-weight: bold;
+                border-radius: 10px;
+              "
+            >
+              Reproducir
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const abecedario = [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+      ];
+      const numeros = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+
+      function crearBotones(contenedorId, lista, tipo) {
+        const contenedor = document.getElementById(contenedorId);
+        lista.forEach((elemento) => {
+          const btn = document.createElement("button");
+          btn.classList.add("btn", "btn-lg");
+          btn.classList.add(tipo === "letra" ? "btn-letter" : "btn-number");
+          btn.innerText = elemento;
+          btn.onclick = () => mostrarModal(elemento);
+          contenedor.appendChild(btn);
+        });
+      }
+
+      function mostrarModal(elemento) {
+        const modalLabel = document.getElementById("modalImagenLabel");
+        const imagenModal = document.getElementById("imagenModal");
+        const reproducirBtn = document.getElementById("reproducirBtn");
+
+        modalLabel.innerText = `Letra/Número: ${elemento}`;
+        imagenModal.src = `imagenes/${elemento}.png`;
+        reproducirBtn.onclick = () => reproducirElemento(elemento);
+
+        const modal = new bootstrap.Modal(
+          document.getElementById("modalImagen")
+        );
+        modal.show();
+      }
+
+      function reproducirElemento(elemento) {
+        // Crear un objeto SpeechSynthesisUtterance con el texto que se desea pronunciar
+        const mensaje = new SpeechSynthesisUtterance(elemento);
+
+        // Establecer el idioma a inglés
+        mensaje.lang = "en-US";
+
+        // Reproducir el mensaje
+        window.speechSynthesis.speak(mensaje);
+      }
+
+      // Cargar los botones
+      crearBotones("abecedario-container", abecedario, "letra");
+      crearBotones("numeros-container", numeros, "numero");
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learningles</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        background-image: url("imagenes/protruding-squares.png");
+        font-family: "Comic Sans MS", cursive, sans-serif; /* Fuente más amigable */
+      }
+
+      .parent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 200px);
+        grid-gap: 20px;
+        margin-top: 30px;
+      }
+
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        border: 3px solid #ffd700;
+        border-radius: 15px;
+        height: 100%;
+        width: 100%;
+        background-color: #ff69b4; /* Rosa pastel */
+        transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+      }
+
+      /* Animación y sombra más suaves */
+      .button:hover {
+        opacity: 0.9;
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Animación en los iconos */
+      .button i {
+        margin-right: 15px;
+        font-size: 30px;
+        transition: transform 0.3s ease;
+      }
+
+      .button:hover i {
+        transform: rotate(15deg);
+      }
+      .icono {
+        width: 110px; /* Tamaño del icono */
+        height: 110px; /* Tamaño del icono */
+        margin-right: 100px; /* Espacio entre el icono y el texto */
+      }
+
+      /* Colores llamativos para cada botón */
+      .div1 {
+        background-color: #ff6347;
+      }
+      .div2 {
+        background-color: #98fb98;
+      }
+      .div3 {
+        background-color: #87cefa;
+      }
+      .div4 {
+        background-color: #ffcc00;
+      }
+      .div5 {
+        background-color: #dda0dd;
+      }
+      .div6 {
+        background-color: #ff4500;
+      }
+      .div7 {
+        background-color: #c547c9;
+      }
+
+      /* Banner promocional */
+      .promo-banner {
+        background-color: #ff6f61;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 40px;
+        font-weight: bold;
+        font-size: 1.2em;
+        animation: pulse 1.5s infinite;
+      }
+
+      /* Efecto de pulsación en el banner */
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .promo-banner button {
+        background-color: #32cd32;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-top: 15px;
+        font-size: 1em;
+        transition: transform 0.3s;
+      }
+
+      .promo-banner button:hover {
+        background-color: #28a745;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Barra de Navegación -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: #fce38a"
+    >
+      <div class="container-fluid">
+        <a
+          class="navbar-brand"
+          href="#"
+          style="font-size: 1.8rem; font-weight: bold; color: #ff6f61"
+        >
+          Learningles 🍎
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                style="color: #ff6f61; font-weight: bold"
+              >
+                Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="perfil-premium.php"
+                style="color: #ff6f61; font-weight: bold"
+              >
+                Mi Perfil
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Cuadrícula de botones -->
+
+    <div class="container mt-4">
+      <div class="parent">
+        <a href="libros_premium.php" class="button div1">
+          <img
+            src="imagenes/libro-electronico.gif"
+            alt="Libros"
+            class="icono"
+          />
+          Libros
+        </a>
+        <a href="seleccionar_nivel_premium.html" class="button div2">
+          <img src="imagenes/mando-de-juegos.gif" alt="Libros" class="icono" />
+          Encuentra el par
+        </a>
+        <a href="abecedario.html" class="button div3">
+          <img
+            src="imagenes/lanzamiento-de-cohete.gif"
+            alt="Aprende el abecedario y numeros"
+            class="icono"
+          />
+          Aprende el abecedario y numeros
+        </a>
+        <a href="perfil-premium.php" class="button div4">
+          <img src="imagenes/perfil.gif" alt="Libros" class="icono" /> Mi perfil
+        </a>
+        <a href="seleccionar_categoria_premium.php" class="button div5">
+          <img src="imagenes/control-de-juego.gif" alt="Libros" class="icono" />
+          Adivina el objeto
+        </a>
+        <a href="adivinanza.php" class="button div6">
+          <img src="imagenes/investigacion.gif" alt="Libros" class="icono" />
+          Adivinanza del dia
+        </a>
+        <a href="tienda.php" class="button div7">
+          <img
+            src="imagenes/tienda-de-juguetes.gif"
+            alt="Libros"
+            class="icono"
+          />
+          Tienda
+        </a>
+      </div>
+    </div>
+
+    <!-- Scripts de jQuery y Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learningles</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        background-color: #63fdff;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' viewBox='0 0 192 192'%3E%3Cpath fill='%235d339f' fill-opacity='0.4' d='M192 15v2a11 11 0 0 0-11 11c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H145v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11 13 13 0 1 1 .02 26 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43a6.1 6.1 0 0 0-3.03 4.87V143h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 181 164a11 11 0 0 0 11 11v2a13 13 0 0 1-13-13 12 12 0 0 1 3.11-7.53l2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84a6.1 6.1 0 0 0-4.87-3.03H145v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 124 181a11 11 0 0 0-11 11h-2a13 13 0 0 1 13-13c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43a6.1 6.1 0 0 0 3.03-4.87V145h-35.02a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 107 124a11 11 0 0 0-22 0c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H49v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11A13 13 0 0 1 81 192h-2a11 11 0 0 0-11-11c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V145H11.98a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 0 1 0 177v-2a11 11 0 0 0 11-11c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H47v-35.02a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 28 109a13 13 0 1 1 0-26c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43A6.1 6.1 0 0 0 47 84.02V49H11.98a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 11 28 11 11 0 0 0 0 17v-2a13 13 0 0 1 13 13c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84A6.1 6.1 0 0 0 11.98 47H47V11.98a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 68 11 11 11 0 0 0 79 0h2a13 13 0 0 1-13 13 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43A6.1 6.1 0 0 0 49 11.98V47h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 85 68a11 11 0 0 0 22 0c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H143V11.98a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 124 13a13 13 0 0 1-13-13h2a11 11 0 0 0 11 11c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V47h35.02a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 179 28a13 13 0 0 1 13-13zM84.02 143a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 83 124a13 13 0 1 1 26 0c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84a6.1 6.1 0 0 0 4.87 3.03H143v-35.02a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 164 107a11 11 0 0 0 0-22c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V49h-35.02a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 1 1 83 68a12 12 0 0 1 3.11-7.53l2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84A6.1 6.1 0 0 0 84.02 49H49v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 28 85a11 11 0 0 0 0 22c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V143h35.02z'%3E%3C/path%3E%3C/svg%3E");
+        font-family: "Comic Sans MS", cursive, sans-serif; /* Fuente más amigable */
+      }
+
+      .parent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 200px);
+        grid-gap: 20px;
+        margin-top: 30px;
+      }
+
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        border: 3px solid #ffd700;
+        border-radius: 15px;
+        height: 100%;
+        width: 100%;
+        background-color: #ff69b4; /* Rosa pastel */
+        transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+      }
+
+      /* Animación y sombra más suaves */
+      .button:hover {
+        opacity: 0.9;
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Animación en los iconos */
+      .button i {
+        margin-right: 15px;
+        font-size: 30px;
+        transition: transform 0.3s ease;
+      }
+
+      .button:hover i {
+        transform: rotate(15deg);
+      }
+
+      /* Colores llamativos para cada botón */
+      .div1 {
+        background-color: #ff6347;
+      }
+      .div2 {
+        background-color: #98fb98;
+      }
+      .div3 {
+        background-color: #87cefa;
+      }
+      .div4 {
+        background-color: #ffcc00;
+      }
+      .div5 {
+        background-color: #dda0dd;
+      }
+      .div6 {
+        background-color: #ff4500;
+      }
+      .div7 {
+        background-color: #c547c9;
+      }
+
+      /* Banner promocional */
+      .promo-banner {
+        background-color: #ff6f61;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 40px;
+        font-weight: bold;
+        font-size: 1.2em;
+        animation: pulse 1.5s infinite;
+      }
+
+      /* Efecto de pulsación en el banner */
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .promo-banner button {
+        background-color: #32cd32;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-top: 15px;
+        font-size: 1em;
+        transition: transform 0.3s;
+      }
+
+      .promo-banner button:hover {
+        background-color: #28a745;
+        transform: scale(1.1);
+      }
+      .icono {
+        width: 110px; /* Tamaño del icono */
+        height: 110px; /* Tamaño del icono */
+        margin-right: 100px; /* Espacio entre el icono y el texto */
+      }
+      .ir-inicio-btn {
+        background-color: #28a745; /* Verde */
+      }
+
+      .ir-inicio-btn:hover {
+        background-color: #218838; /* Verde más oscuro */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Barra de Navegación -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: #fce38a"
+    >
+      <div class="container-fluid">
+        <a
+          class="navbar-brand"
+          href="#"
+          style="font-size: 1.8rem; font-weight: bold; color: #ff6f61"
+        >
+          Learningles 🍎
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#"
+                style="color: #ff6f61; font-weight: bold"
+              >
+                Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="perfil_gratis.php"
+                style="color: #ff6f61; font-weight: bold"
+              >
+                Mi Perfil
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Cuadrícula de botones -->
+
+    <div class="container mt-4">
+      <div class="parent">
+        <a href="libros.php" class="button div1">
+          <img
+            src="imagenes/libro-electronico.gif"
+            alt="Libros"
+            class="icono"
+          />
+          Libros
+        </a>
+        <a href="seleccionar_nivel.html" class="button div2">
+          <img src="imagenes/mando-de-juegos.gif" alt="Libros" class="icono" />
+          Encuentra el par
+        </a>
+        <a href="abecedario.html" class="button div3">
+          <img
+            src="imagenes/lanzamiento-de-cohete.gif"
+            alt="Aprende el abecedario y numeros"
+            class="icono"
+          />
+          Aprende el abecedario y numeros
+        </a>
+        <a href="perfil_gratis.php" class="button div4">
+          <img src="imagenes/perfil.gif" alt="Libros" class="icono" /> Mi perfil
+        </a>
+        <a href="seleccionar_categoria_gratis.php" class="button div5">
+          <img src="imagenes/control-de-juego.gif" alt="Libros" class="icono" />
+          Adivina el objeto
+        </a>
+      </div>
+    </div>
+
+    <!-- Banner promocional para la versión Premium -->
+    <div class="container">
+      <div class="promo-banner">
+        🎉 ¡Para desbloquear más beneficios como la Tienda de Avatares y un
+        juego extra, consigue la versión Premium aquí! 🎉
+        <br />
+        <button onclick="window.location.href='actualizar.php'">
+          ¡Quiero Premium!
+        </button>
+      </div>
+    </div>
+
+    <!-- Scripts de jQuery y Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
